@@ -15,6 +15,7 @@
 		3E43B12019AABCB0002605CF /* QuakesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43B11F19AABCB0002605CF /* QuakesViewModel.swift */; };
 		3E43B12319AAC185002605CF /* QuakeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43B12219AAC185002605CF /* QuakeDetail.swift */; };
 		3E43B12519AAC7CD002605CF /* QuakeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43B12419AAC7CD002605CF /* QuakeCell.swift */; };
+		3E43B12719AAE17E002605CF /* EarthQuakeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E43B12619AAE17E002605CF /* EarthQuakeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3E43B12119AABE08002605CF /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		3E43B12219AAC185002605CF /* QuakeDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeDetail.swift; sourceTree = "<group>"; };
 		3E43B12419AAC7CD002605CF /* QuakeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeCell.swift; sourceTree = "<group>"; };
+		3E43B12619AAE17E002605CF /* EarthQuakeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthQuakeDetailViewController.swift; sourceTree = "<group>"; };
 		62AC52DEE9504DCDB0E23924 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C0BF6C7DDCA34715B093AB03 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 				3E43B12119AABE08002605CF /* bridge.h */,
 				3E43B12219AAC185002605CF /* QuakeDetail.swift */,
 				3E43B12419AAC7CD002605CF /* QuakeCell.swift */,
+				3E43B12619AAE17E002605CF /* EarthQuakeDetailViewController.swift */,
 			);
 			path = SwiftQuake;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E43B12719AAE17E002605CF /* EarthQuakeDetailViewController.swift in Sources */,
 				3E43B10519AAA602002605CF /* MainViewController.swift in Sources */,
 				3E43B10319AAA602002605CF /* AppDelegate.swift in Sources */,
 				3E43B12519AAC7CD002605CF /* QuakeCell.swift in Sources */,

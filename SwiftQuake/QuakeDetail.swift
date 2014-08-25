@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Stephen L. McMahon. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class QuakeDetail {
     var place : String

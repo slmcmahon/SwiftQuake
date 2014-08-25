@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Stephen L. McMahon. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol QuakesViewModelProtocol {
     func quakeDataLoaded()
@@ -27,6 +27,7 @@ class QuakesViewModel {
         manager.GET("http://earthquake.usgs.gov/earthquakes/feed/v0.1/summary/significant_month.geojson",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) -> Void in
+                println("\(responseObject)")
                 self.quakes = QuakeDetail.parseQuakeData(responseObject as NSDictionary);
                 self.delegate?.quakeDataLoaded()
             }) { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in

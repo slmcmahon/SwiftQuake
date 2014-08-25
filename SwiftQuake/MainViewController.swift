@@ -35,6 +35,30 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        println("\(segue.identifier)")
+
+        if (segue.identifier == "showDetail") {
+            let p = self.table?.indexPathForSelectedRow()
+            let row = p!.row as Int
+            let q = quakeData.quakes[row] as QuakeDetail
+            let vc = segue.destinationViewController as EarthQuakeDetailViewController
+            vc.quakeDetail = q
+        }
+    }
+    
+    override func motionEnded(motion: UIEventSubtype, withEvent event: UIEvent!) {
+        if (motion == UIEventSubtype.MotionShake) {
+            quakeData.loadQuakeData()
+        }
+    }
+    
+    override func canBecomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    
+    
     func quakeDataLoaded() {
         table?.reloadData()
     }
