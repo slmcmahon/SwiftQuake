@@ -47,15 +47,9 @@ class QuakesViewController: UITableViewController {
     
     private func quakesLoaded() {
         self.tableView.reloadData()
-        
-        print("\(viewModel!.quakes[0].place)")
-        for q in viewModel!.quakes {
-            print("\(q.place)")
-        }
     }
     
     private func loadFailed(message : String!) {
-        //lblTest.text = message
         print("Error message: \(message)")
     }
 }

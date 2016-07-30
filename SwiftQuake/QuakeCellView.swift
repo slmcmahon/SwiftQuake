@@ -13,6 +13,7 @@ class QuakeCellView : UITableViewCell {
     @IBOutlet var lblQuakePlace: UILabel!
     @IBOutlet var lblQuakeMagnitude : UILabel!
     @IBOutlet var lblTsunami : UILabel!
+    @IBOutlet var lblDateTime : UILabel!
     
     var quake : Quake!
     
@@ -21,5 +22,6 @@ class QuakeCellView : UITableViewCell {
         lblQuakePlace.text = quake.place
         lblQuakeMagnitude.text = "\(quake.magnitude)"
         lblTsunami.text = quake.tsunami == true ? "Yes" : "No"
+        lblDateTime.text = quake.date
     }
 }
