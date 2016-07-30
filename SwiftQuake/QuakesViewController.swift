@@ -8,25 +8,54 @@
 
 import UIKit
 
-class QuakesViewController: UIViewController {
-
-    @IBOutlet var lblTest: UILabel!
+class QuakesViewController: UITableViewController {
+    
+    var viewModel : QuakesViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _ = QuakesViewModel(onComplete: quakesLoaded, onError: loadFailed);
+        self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+        
+        viewModel = QuakesViewModel(onComplete: quakesLoaded, onError: loadFailed);
     }
     
-    private func quakesLoaded(quakes : [Quake]) {
-        lblTest.text = quakes[0].place
-        for q in quakes {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return (viewModel!.quakes.count)
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cellId = "QuakeCell"
+        var cell: QuakeCellView! = tableView.dequeueReusableCellWithIdentifier(cellId) as! QuakeCellView!
+        
+        if (cell == nil) {
+            cell = QuakeCellView(style: .Default, reuseIdentifier: cellId)
+        }
+        
+        cell.quake = viewModel?.quakes[indexPath.row]
+        
+        return cell as UITableViewCell!
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    private func quakesLoaded() {
+        self.tableView.reloadData()
+        
+        print("\(viewModel!.quakes[0].place)")
+        for q in viewModel!.quakes {
             print("\(q.place)")
         }
     }
     
     private func loadFailed(message : String!) {
-        lblTest.text = message
+        //lblTest.text = message
         print("Error message: \(message)")
     }
 }

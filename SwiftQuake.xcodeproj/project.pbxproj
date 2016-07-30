@@ -14,6 +14,7 @@
 		3E3BC1F21C7E2719008CC234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3BC1F01C7E2719008CC234 /* LaunchScreen.storyboard */; };
 		3E3BC1FD1C7E2719008CC234 /* SwiftQuakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BC1FC1C7E2719008CC234 /* SwiftQuakeTests.swift */; };
 		3E3BC2081C7E2912008CC234 /* QuakesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BC2071C7E2912008CC234 /* QuakesViewModel.swift */; };
+		3E98E0001D4C8032009057B8 /* QuakeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E98DFFF1D4C8032009057B8 /* QuakeCellView.swift */; };
 		3EB3369E1D4C579A00A4D71A /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB3369D1D4C579A00A4D71A /* Quake.swift */; };
 		3EE1C38F1D4C613900066110 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1C38E1D4C613900066110 /* Constants.swift */; };
 		90DDFE8E9BAA60EB56F85FA4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4379FD9CD0F76571DB9AC02C /* Pods.framework */; };
@@ -41,6 +42,7 @@
 		3E3BC1FC1C7E2719008CC234 /* SwiftQuakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftQuakeTests.swift; sourceTree = "<group>"; };
 		3E3BC1FE1C7E2719008CC234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E3BC2071C7E2912008CC234 /* QuakesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakesViewModel.swift; sourceTree = "<group>"; };
+		3E98DFFF1D4C8032009057B8 /* QuakeCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakeCellView.swift; sourceTree = "<group>"; };
 		3EB3369D1D4C579A00A4D71A /* Quake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
 		3EE1C38E1D4C613900066110 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4379FD9CD0F76571DB9AC02C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 		3E3BC1E61C7E2719008CC234 /* SwiftQuake */ = {
 			isa = PBXGroup;
 			children = (
+				3E98E0011D4C806A009057B8 /* Views */,
 				3EE1C3901D4C66D400066110 /* ViewModels */,
 				3EB3369C1D4C578500A4D71A /* Models */,
 				3E3BC1E71C7E2719008CC234 /* AppDelegate.swift */,
@@ -110,6 +113,14 @@
 				3E3BC1FE1C7E2719008CC234 /* Info.plist */,
 			);
 			path = SwiftQuakeTests;
+			sourceTree = "<group>";
+		};
+		3E98E0011D4C806A009057B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3E98DFFF1D4C8032009057B8 /* QuakeCellView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		3EB3369C1D4C578500A4D71A /* Models */ = {
@@ -299,6 +310,7 @@
 			files = (
 				3EE1C38F1D4C613900066110 /* Constants.swift in Sources */,
 				3E3BC1EA1C7E2719008CC234 /* QuakesViewController.swift in Sources */,
+				3E98E0001D4C8032009057B8 /* QuakeCellView.swift in Sources */,
 				3EB3369E1D4C579A00A4D71A /* Quake.swift in Sources */,
 				3E3BC1E81C7E2719008CC234 /* AppDelegate.swift in Sources */,
 				3E3BC2081C7E2912008CC234 /* QuakesViewModel.swift in Sources */,

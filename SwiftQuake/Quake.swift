@@ -12,12 +12,14 @@ import SwiftyJSON
 public class Quake {
     public let magnitude : Double!
     public let place : String!
+    public let tsunami : Bool!
     
     init(data : JSON) {
         
         let props = data["properties"];
         magnitude = props["mag"].double ?? 0
         place = props["place"].string ?? ""
+        tsunami = props["tsunami"].boolValue
     }
     
     public static func parse(quakeData : JSON) -> [Quake]? {

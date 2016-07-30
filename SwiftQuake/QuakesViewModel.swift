@@ -13,12 +13,13 @@ public class QuakesViewModel {
     
     public var quakes : [Quake] = []
     
-    public init(onComplete:(quakes : [Quake]) -> Void, onError:(message : String!) -> Void) {
+    public init(onComplete:() -> Void, onError:(message : String!) -> Void) {
         Alamofire.request(.GET, Constants.QuakesUrl, parameters: nil)
             .responseJSON { response in
                 if let rs = response.result.value {
                     let json = JSON(rs)
-                    onComplete(quakes: Quake.parse(json)!)
+                    self.quakes = Quake.parse(json)!
+                    onComplete()
                 } else {
                     onError(message: "Failed to load quake data.")
                 }
