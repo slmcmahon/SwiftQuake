@@ -14,14 +14,20 @@ public class Quake {
     public let place : String!
     public let tsunami : Bool!
     public let date : String!
+    public let latitude : Double!
+    public let longitude : Double!
     
     init(data : JSON) {
         
-        let props = data["properties"];
+        let props = data["properties"]
+        let geo = data["geometry"]["coordinates"]
+        
         magnitude = props["mag"].doubleValue
         place = props["place"].stringValue
         tsunami = props["tsunami"].boolValue
         date = Quake.getDateString(props["time"].doubleValue)
+        latitude = geo[0].doubleValue
+        longitude = geo[1].doubleValue
     }
     
     private static func getDateString(epoch : Double) -> String! {
