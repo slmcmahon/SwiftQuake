@@ -20,7 +20,7 @@ public class Quake {
         place = props["place"].string ?? ""
     }
     
-    public static func load(quakeData : JSON) -> [Quake]? {
+    public static func parse(quakeData : JSON) -> [Quake]? {
         return quakeData["features"].arrayValue.map({Quake(data: $0)})
     }
 }
