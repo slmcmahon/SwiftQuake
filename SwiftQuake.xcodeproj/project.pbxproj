@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		3E3BC1E81C7E2719008CC234 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BC1E71C7E2719008CC234 /* AppDelegate.swift */; };
-		3E3BC1EA1C7E2719008CC234 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BC1E91C7E2719008CC234 /* ViewController.swift */; };
+		3E3BC1EA1C7E2719008CC234 /* QuakesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BC1E91C7E2719008CC234 /* QuakesViewController.swift */; };
 		3E3BC1ED1C7E2719008CC234 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3BC1EB1C7E2719008CC234 /* Main.storyboard */; };
 		3E3BC1EF1C7E2719008CC234 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E3BC1EE1C7E2719008CC234 /* Assets.xcassets */; };
 		3E3BC1F21C7E2719008CC234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E3BC1F01C7E2719008CC234 /* LaunchScreen.storyboard */; };
 		3E3BC1FD1C7E2719008CC234 /* SwiftQuakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BC1FC1C7E2719008CC234 /* SwiftQuakeTests.swift */; };
+		3E3BC2081C7E2912008CC234 /* QuakesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BC2071C7E2912008CC234 /* QuakesViewModel.swift */; };
+		3EB3369E1D4C579A00A4D71A /* Quake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB3369D1D4C579A00A4D71A /* Quake.swift */; };
 		90DDFE8E9BAA60EB56F85FA4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4379FD9CD0F76571DB9AC02C /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +31,7 @@
 /* Begin PBXFileReference section */
 		3E3BC1E41C7E2719008CC234 /* SwiftQuake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftQuake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3BC1E71C7E2719008CC234 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3E3BC1E91C7E2719008CC234 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E3BC1E91C7E2719008CC234 /* QuakesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesViewController.swift; sourceTree = "<group>"; };
 		3E3BC1EC1C7E2719008CC234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3E3BC1EE1C7E2719008CC234 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E3BC1F11C7E2719008CC234 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		3E3BC1F81C7E2719008CC234 /* SwiftQuakeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftQuakeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3BC1FC1C7E2719008CC234 /* SwiftQuakeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftQuakeTests.swift; sourceTree = "<group>"; };
 		3E3BC1FE1C7E2719008CC234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E3BC2071C7E2912008CC234 /* QuakesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuakesViewModel.swift; sourceTree = "<group>"; };
+		3EB3369D1D4C579A00A4D71A /* Quake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quake.swift; sourceTree = "<group>"; };
 		4379FD9CD0F76571DB9AC02C /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA4183B3C06DF9839D82D5C0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EB2F74B30DE12685C94E3EFC /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,12 +88,14 @@
 		3E3BC1E61C7E2719008CC234 /* SwiftQuake */ = {
 			isa = PBXGroup;
 			children = (
+				3EB3369C1D4C578500A4D71A /* Model */,
 				3E3BC1E71C7E2719008CC234 /* AppDelegate.swift */,
-				3E3BC1E91C7E2719008CC234 /* ViewController.swift */,
+				3E3BC1E91C7E2719008CC234 /* QuakesViewController.swift */,
 				3E3BC1EB1C7E2719008CC234 /* Main.storyboard */,
 				3E3BC1EE1C7E2719008CC234 /* Assets.xcassets */,
 				3E3BC1F01C7E2719008CC234 /* LaunchScreen.storyboard */,
 				3E3BC1F31C7E2719008CC234 /* Info.plist */,
+				3E3BC2071C7E2912008CC234 /* QuakesViewModel.swift */,
 			);
 			path = SwiftQuake;
 			sourceTree = "<group>";
@@ -101,6 +107,14 @@
 				3E3BC1FE1C7E2719008CC234 /* Info.plist */,
 			);
 			path = SwiftQuakeTests;
+			sourceTree = "<group>";
+		};
+		3EB3369C1D4C578500A4D71A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3EB3369D1D4C579A00A4D71A /* Quake.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		C2403344845333C4699ED0D7 /* Frameworks */ = {
@@ -272,8 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E3BC1EA1C7E2719008CC234 /* ViewController.swift in Sources */,
+				3E3BC1EA1C7E2719008CC234 /* QuakesViewController.swift in Sources */,
+				3EB3369E1D4C579A00A4D71A /* Quake.swift in Sources */,
 				3E3BC1E81C7E2719008CC234 /* AppDelegate.swift in Sources */,
+				3E3BC2081C7E2912008CC234 /* QuakesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

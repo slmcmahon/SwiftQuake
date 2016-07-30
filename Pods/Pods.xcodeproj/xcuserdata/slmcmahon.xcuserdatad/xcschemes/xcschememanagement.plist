@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Bond.xcscheme</key>
+		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,12 +27,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>80076C510C29F960587E43C0597ECBD5</key>
+		<key>8972D1B3785A7CF11C5D31FB702BCB0E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B842D689538FB8D1EAD6FB544F8D9CEF</key>
+		<key>EA5783E1E72DAF034F5567D9F2721A2E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
